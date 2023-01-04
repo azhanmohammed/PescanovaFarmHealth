@@ -12,7 +12,7 @@ dataframe = gpd.read_file("./static/pescanovaGeoJsonWithProperties.geojson")
 
 # Specify the title and logo for the web page.
 st.set_page_config(page_title='Pond Health Analysis for Neuva Pescanova', page_icon='./static/galaxeye.png', layout="wide")
-
+map = folium.Map(location=[-2.4474679490380993, -79.98500168575568], zoom_start=16, scrollWheelZoom=True)
 # Add a sidebar to the web page. 
 with st.sidebar:
     choose = option_menu("Pond Health Analysis for Neuva Pescanova", ["Dashboard","Chlorophyll","Dissolved Oxygen","pH","Salinity","Turbidity","Custom Filter"],
@@ -36,8 +36,6 @@ if choose == "Dashboard":
         st.markdown('<p class="font">Detailed Analysis</p>', unsafe_allow_html=True)    
     with col2:               # To display brand log
         st.image(logo, width=130 )
-    
-    map = folium.Map(location=[-2.4474679490380993, -79.98500168575568], zoom_start=16, scrollWheelZoom=True)
     # img = folium.raster_layers.ImageOverlay(
     #     name="RGB Image",
     #     image="./static/rgbimage.png",
