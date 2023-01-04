@@ -1,8 +1,8 @@
-folium==0.13.0
+folium
 geopandas
-branca==0.3.1
-streamlit_folium
-streamlit_option_menu
-streamlit==1.12.2
+branca
+streamlit_folium==0.8.1
+streamlit_option_menu==0.3.2
+streamlit==1.16.0
 numpy
 Pillow
