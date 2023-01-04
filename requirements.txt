@@ -1,6 +1,6 @@
 folium
 geopandas
-branca
+branca==0.3.1
 streamlit_folium
 streamlit_option_menu
 streamlit
