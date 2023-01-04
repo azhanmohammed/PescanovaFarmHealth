@@ -37,7 +37,7 @@ if choose == "Dashboard":
     with col2:               # To display brand log
         st.image(logo, width=130 )
     
-    map = folium.Map(location=[-2.4474679490380993, -79.98500168575568], zoom_start=16, scrollWheelZoom=True, tiles='CartoDB positron')
+    map = folium.Map(location=[-2.4474679490380993, -79.98500168575568], zoom_start=16, scrollWheelZoom=True)
     # img = folium.raster_layers.ImageOverlay(
     #     name="RGB Image",
     #     image="./static/rgbimage.png",
@@ -49,9 +49,9 @@ if choose == "Dashboard":
     # )
 
     # img.add_to(map)
-    for l, row in enumerate(dataframe.iterrows()):
-            html = popupTable(dataframe, l)
-            iframe = branca.element.IFrame(html=html,width=700,height=600)
-            popup = folium.Popup(folium.Html(html, script=True), max_width=500)
-            folium.GeoJson(data=row[1][5], popup=popup).add_to(map)
+    # for l, row in enumerate(dataframe.iterrows()):
+    #         html = popupTable(dataframe, l)
+    #         iframe = branca.element.IFrame(html=html,width=700,height=600)
+    #         popup = folium.Popup(folium.Html(html, script=True), max_width=500)
+    #         folium.GeoJson(data=row[1][5], popup=popup).add_to(map)
     st_map = st_folium(map, width=1000, height=650)
