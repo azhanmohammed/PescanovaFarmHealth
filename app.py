@@ -38,17 +38,17 @@ if choose == "Dashboard":
         st.image(logo, width=130 )
     
     map = folium.Map(location=[-2.4474679490380993, -79.98500168575568], zoom_start=16, scrollWheelZoom=True, tiles='CartoDB positron')
-    img = folium.raster_layers.ImageOverlay(
-        name="RGB Image",
-        image="./static/rgbimage.png",
-        bounds=[[-2.460891311086019, -79.99976724386217], [-2.4354694248845985, -79.96761258691551]],
-        opacity=1.0,
-        interactive=True,
-        cross_origin=False,
-        zindex=1,
-    )
+    # img = folium.raster_layers.ImageOverlay(
+    #     name="RGB Image",
+    #     image="./static/rgbimage.png",
+    #     bounds=[[-2.460891311086019, -79.99976724386217], [-2.4354694248845985, -79.96761258691551]],
+    #     opacity=1.0,
+    #     interactive=True,
+    #     cross_origin=False,
+    #     zindex=1,
+    # )
 
-    img.add_to(map)
+    # img.add_to(map)
     for l, row in enumerate(dataframe.iterrows()):
             html = popupTable(dataframe, l)
             iframe = branca.element.IFrame(html=html,width=700,height=600)
