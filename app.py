@@ -8,6 +8,11 @@ from streamlit_folium import st_folium
 from utils import popupTable
 import branca
 
+
+map = folium.Map(location=[-2.4474679490380993, -79.98500168575568], zoom_start=16, scrollWheelZoom=True, tiles='CartoDB positron')
+st_map = st_folium(map, width=1000, height=650)
+
+
 # dataframe = gpd.read_file("./static/pescanovaGeoJsonWithProperties.geojson")
 
 # # Specify the title and logo for the web page.
@@ -56,12 +61,3 @@ import branca
 #             folium.GeoJson(data=row[1][5], popup=popup).add_to(map)
 #     st_map = st_folium(map, width=1000, height=650)
 
-import streamlit as st
-import pandas as pd
-import numpy as np
-
-df = pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
-    columns=['lat', 'lon'])
-
-st.map(df)
