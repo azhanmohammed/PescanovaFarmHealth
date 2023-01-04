@@ -9,7 +9,7 @@ from utils import popupTable
 import branca
 
 
-map = folium.Map(location=[-2.4474679490380993, -79.98500168575568], zoom_start=16, scrollWheelZoom=True, tiles='CartoDB positron')
+map = folium.Map(location=[-2.4474679490380993, -79.98500168575568], zoom_start=16, scrollWheelZoom=True)
 st_map = st_folium(map, width=1000, height=650)
 
 
