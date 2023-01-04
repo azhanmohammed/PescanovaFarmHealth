@@ -1,0 +1,8 @@
+folium
+geopandas
+branca
+streamlit_folium
+streamlit_option_menu
+streamlit
+numpy
+Pillow
