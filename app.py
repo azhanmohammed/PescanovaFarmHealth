@@ -11,11 +11,11 @@ import branca
 dataframe = gpd.read_file("./static/pescanovaGeoJsonWithProperties.geojson")
 
 # Specify the title and logo for the web page.
-st.set_page_config(page_title='GalaxEye Space PoHA', page_icon='./static/galaxeye.png', layout="wide")
+st.set_page_config(page_title='GalaxEye Space Pond Health Analysis', page_icon='./static/galaxeye.png', layout="wide")
 
 # Add a sidebar to the web page. 
 with st.sidebar:
-    choose = option_menu("GalaxEye Space-PoHA (Pond Health Analysis)", ["Dashboard","Chlorophyll","Dissolved Oxygen","pH","Salinity","Turbidity"],
+    choose = option_menu("GalaxEye Space-Pond Health Analysis)", ["Dashboard","Chlorophyll","Dissolved Oxygen","pH","Salinity","Turbidity"],
                          icons=['graph-up', 'brightness-high', 'cloud-haze2', 'speedometer2', 'snow', 'moisture'],
                          menu_icon="app-indicator", default_index=0,
                          styles={
